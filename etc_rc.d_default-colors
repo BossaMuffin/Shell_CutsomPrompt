@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# PROVIDE: default_colors
+# BEFORE: disks
+
+
+for TTYDEV in /dev/ttyv* ; do
+        echo -n $'\e[=4G' > $TTYDEV
+done
